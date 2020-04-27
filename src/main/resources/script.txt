@@ -1,0 +1,3 @@
+--i Invaders.jar
+--add-before-method com/diamond/iain/javagame/entities/Player addScore(int) methodBody.txt
+--o jarChanged.jar

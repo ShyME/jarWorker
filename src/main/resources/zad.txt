@@ -1,0 +1,34 @@
+Wskazówki:
+0) Tytuł maila i nazwa archiwum (bez binarek - np. program.jar) - NRGRUPY_NAZWISKO_IMIĘ_NRINDEKSU_LAB2
+1) Nie wysyłamy żadnych plików .jar
+
+Treść zadania:
+ 
+Należy wykonać aplikację, która pozwoli użytkownikowi na:
+ 
+Załadowanie pliku .jar (--i), np. --i game.jar
+Eksplorację pliku .jar (pakiety --list-packages, klasy --list-classes, metody --list-methods [pelna-nazwa-klasy], pola --list-fields [pelna-nazwa-klasy], konstruktory --list-ctors [pelna-nazwa-klasy]) – pamiętać o prywatnych
+Modyfikację wskazanego celu --script [example-modify-game.rts]:
+Dodanie/usunięcie dodanego pakietu: add-package [pelna-nazwa] remove-package [pelna-nazwa]
+Dodanie/usunięcie dodanej klasy/interfejsu: add-class [pelna-nazwa] add-interface [pelna-nazwa] remove-class [pelna-nazwa] remove-interface [pelna-nazwa]
+Dodanie/usunięcie metody: add-method [pelna-nazwa] remove-method [pelna-nazwa]
+Nadpisanie ciała metody set-method-body [pelna-nazwa sciezka-do-pliku-src]
+Dopisanie kodu na początek/koniec wskazanej metody: add-before-method [pelna-nazwa sciezka-do-pliku-src] add-after-method [pelna-nazwa sciezka-do-pliku-src]
+Dodanie/usunięcie pola add-field [pelna-nazwa-klasy nazwa-pola]
+Dodanie/usunięcie konstruktora [pelna-nazwa]
+Nadpisanie ciała konstruktora [set-ctor-body] [pelna-nazwa sciezka-do-pliku-src]
+Zapisanie zmodyfikowanego pliku .jar --o modified-game.jar
+ 
+Ponadto:
+Narzędzie budowane z wykorzystaniem Maven’a
+
+Znaleźć miejsce do modyfikacji kodu programu. Opracować skrypt (i dołączyć do wysyłanego archiwum) umożliwiający wprowadzenie kodu "u" powodującego zdobycie 100 punktów po każdym trafieniu. Wyeksportować zmodyfikowany plik .jar.
+
+Termin 03.01.2020 23:59
+
+Podpowiedzi:
+ 
+JAR to jest plik ZIP - do jego przeglądania i zapisywania można wykorzystać klasy: JarInputStream, JarEntry i JarOutputStream (uwaga: trzeba pamiętać o pilnowaniu MANIFESTu).
+Do wczytania klasy z pliku .class można wykorzystać klasę URLClassLoader 
+Dokumentacja do Javassist: http://www.javassist.org/tutorial/tutorial.html
+ 
